@@ -1,0 +1,12 @@
+<%= form_with url: "/site/search", local: true, method: :get do |f| %>
+  <div class="field">
+    <%= f.label :Nome_da_cidade %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="input-field">
+    <%= f.select :state, @states %>
+  </div>
+
+  <input type='submit' value="Pesquisar">
+<% end %>

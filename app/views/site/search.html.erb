@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Estado</th>
+  </tr>
+  <% @cities.each do |city| %>
+    <tr>
+      <th> <%= city.name %> </th>
+      <th> <%= city.state.name %> </th>
+    </tr>
+  <% end %>
+</table>
