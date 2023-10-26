@@ -1,0 +1,21 @@
+require:
+  - rubocop-rails
+
+AllCops:
+ TargetRubyVersion: 2.7.0
+ NewCops: enable
+ Exclude:
+   - 'bin/**/*'
+   - 'vendor/**/*'
+   - 'db/**/*'
+   - 'config/**/*'
+   - 'script/**/*'
+   - 'spec/rails_helper.rb'
+
+Documentation:
+ Enabled: false
+
+Metrics/BlockLength:
+ AllowedMethods: ['describe', 'context', 'feature', 'scenario', 'let']
+
+
