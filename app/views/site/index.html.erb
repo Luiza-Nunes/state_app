@@ -1,12 +1,37 @@
-<%= form_with url: "/site/search", local: true, method: :get do |f| %>
-  <div class="field">
-    <%= f.label :Nome_da_cidade %>
-    <%= f.text_field :city %>
-  </div>
+<html lang="pt-br">
 
-  <div class="input-field">
-    <%= f.select :state, @states %>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/stylesheets/site.scss">
+</head>
 
-  <input type='submit' value="Pesquisar">
-<% end %>
+<body>
+  <div class="container">
+    <div class="form-image">
+      <%= image_tag("site-images/undraw_world_re_768g.svg")%> 
+    </div>
+
+    <div class="form">
+      <%= form_with url: "/site/search", local: true, method: :get do |f| %>
+        <div class="input-group">
+          <div class="input-box">
+            <%= f.label :Nome_da_cidade %>
+            <%= f.text_field :city %>
+          </div>
+        
+          <div class="input-field">
+            <%= f.select :state, @states %>
+          </div>
+        </div>
+
+        <div class="continue-button">
+          <input type='submit' value="Pesquisar">
+        </div>
+      <% end %>
+    </div>
+  </div>
+</body>
+
+</html>

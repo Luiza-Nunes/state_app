@@ -1,12 +1,30 @@
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Estado</th>
-  </tr>
-  <% @cities.each do |city| %>
-    <tr>
-      <th> <%= city.name %> </th>
-      <th> <%= city.state.name %> </th>
-    </tr>
-  <% end %>
-</table>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/stylesheets/site.scss">
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-image">
+      <%= image_tag("site-images/undraw_directions_re_kjxs.svg")%> 
+    </div>
+    <div class="form">
+      <table>
+        <tr>
+          <th>Nome</th>
+          <th>Estado</th>
+        </tr>
+        <% @cities.each do |city| %>
+          <tr>
+            <td> <%= city.name %> </td>
+            <td> <%= city.state.name %> </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</body>
