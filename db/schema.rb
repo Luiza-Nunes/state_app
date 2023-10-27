@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2023_10_25_003848) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.integer "state_id"
+    t.bigint "state_id"
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
